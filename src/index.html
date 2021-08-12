@@ -10,20 +10,30 @@
 <body>
   <div class="container">
     <h2>Pass Generator</h2>
-    <div class="col">
-      <div class="row">
-        <input type="checkbox" id="has-letters">
-        <label for="has-letters">Incluir letras</label>
-      </div>
-      <div class="row">
-        <input type="checkbox" id="has-numbers">
-        <label for="has-numbers">Incluir numeros</label>
-      </div>
-      <br>
-      <div class="row">
-        <button id="generate">Generar</button>
-        <input type="text" id="result">
-      </div>
+
+
+    <label for="character-count">La contraseña debe tener <input type="number" id="character-count"> caracteres.</label>
+
+    <p>La contraseña puede...</p>
+
+    <div class="row">
+      <input type="checkbox" id="has-letters-minus">
+      <label for="has-letters-minus">Incluir letras minusculas</label>
+    </div>
+    <div class="row">
+      <input type="checkbox" id="has-letters-mayus">
+      <label for="has-letters-mayus">Incluir letras mayusculas</label>
+    </div>
+    <div class="row">
+      <input type="checkbox" id="has-numbers">
+      <label for="has-numbers">Incluir numeros</label>
+    </div>
+    <div class="row">
+      <button id="generate">Generar Contraseña</button>
+    </div>
+    <div class="row" id="result-row">
+      <input type="text" id="result" readonly>
+      <button id="copy">Copiar</button>
     </div>
   </div>
 

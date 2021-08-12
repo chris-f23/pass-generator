@@ -3,7 +3,34 @@
 }
 
 .container {
-  max-width: 600px;
+  max-width: 350px;
   min-width: max-content;
   margin: 25px 50px 75px 50px;
+}
+
+#result-row {
+  margin-top: 10px;
+}
+
+#result {
+  width: 320px;
+}
+
+#generate {
+  margin-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#character-count {
+  width: 34px;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+input {
+  margin-top: 10px;
 }
