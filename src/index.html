@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="tailwind.css">
   <title>pass-generator</title>
 </head>
-<body>
-  <div class="container">
-    <h2>Pass Generator</h2>
+<body class="flex justify-center items-center bg-blue-200">
+  <div class="w-full md:flex-shrink md:w-3/4">
+    <div class="m-4 px-4 py-4 pb-12 md:px-10 bg-white border-gray-200 rounded-2xl shadow-xl">
+      <h1 class="mb-4 text-center text-4xl text-blue-700 font-light">Pass Generator</h1>
 
+      <div class="mb-1">
+        <label for="character-count">
+          La contraseña debe tener
+          <input class="pl-2 w-12 ring-blue-200 ring-1" type="number" id="character-count">
+          caracteres.
+        </label>
+      </div>
 
-    <label for="character-count">La contraseña debe tener <input type="number" id="character-count"> caracteres.</label>
+      <p class="mb-1">La contraseña puede...</p>
 
-    <p>La contraseña puede...</p>
+      <div class="row mb-1 mx-2">
+        <input type="checkbox" id="has-letters-minus">
+        <label for="has-letters-minus">Incluir letras minusculas</label>
+      </div>
+      <div class="row mb-1 mx-2">
+        <input type="checkbox" id="has-letters-mayus">
+        <label for="has-letters-mayus">Incluir letras mayusculas</label>
+      </div>
+      <div class="row mb-1 mx-2">
+        <input type="checkbox" id="has-numbers">
+        <label for="has-numbers">Incluir numeros</label>
+      </div>
+      
+      <div class="mt-5 mb-5 mx-2">
+        <button class="py-2 px-6 text-white font-semibold rounded w-full sm:w-auto bg-blue-600 hover:bg-blue-700" id="generate">Generar Contraseña</button>
+      </div>
 
-    <div class="row">
-      <input type="checkbox" id="has-letters-minus">
-      <label for="has-letters-minus">Incluir letras minusculas</label>
-    </div>
-    <div class="row">
-      <input type="checkbox" id="has-letters-mayus">
-      <label for="has-letters-mayus">Incluir letras mayusculas</label>
-    </div>
-    <div class="row">
-      <input type="checkbox" id="has-numbers">
-      <label for="has-numbers">Incluir numeros</label>
-    </div>
-    <div class="row">
-      <button id="generate">Generar Contraseña</button>
-    </div>
-    <div class="row" id="result-row">
-      <input type="text" id="result" readonly>
-      <button id="copy">Copiar</button>
+      <div class="flex flex-wrap sm:flex-nowrap mx-2" id="result-row">
+        <input class="
+          h-10 w-full sm:flex-grow sm:h-auto
+          px-2 text-center font-mono ring-2 ring-blue-600 rounded" type="text" id="result" readonly>
+        <button class="
+          w-full mt-1 sm:w-auto sm:flex-none sm:ml-4 sm:mt-0
+          py-2 px-6 text-white font-semibold rounded bg-gray-500 hover:bg-gray-600" id="copy">Copiar</button>
+      </div>
     </div>
   </div>
 
